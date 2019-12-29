@@ -4,7 +4,7 @@ pipeline {
     }
     tools {
         // Note: this should match with the tool name configured in your jenkins instance (JENKINS_URL/configureTools/)
-        maven "Maven 3.6.0"
+        maven "M3"
     }
     environment {
         // This can be nexus3 or nexus2
@@ -12,11 +12,11 @@ pipeline {
         // This can be http or https
         NEXUS_PROTOCOL = "http"
         // Where your Nexus is running
-        NEXUS_URL = "18.216.20.238:8081"
+        NEXUS_URL = "18.216.136.90:8081"
         // Repository where we will upload the artifact
         NEXUS_REPOSITORY = "repository-example"
         // Jenkins credential id to authenticate to Nexus OSS
-        NEXUS_CREDENTIAL_ID = "nexus-credentials"
+        NEXUS_CREDENTIAL_ID = "admin"
     }
     stages {
         stage("clone code") {
